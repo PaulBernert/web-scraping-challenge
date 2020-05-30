@@ -54,7 +54,7 @@ def scrape():
         marsFact = [col1,col2]
         marsFacts.append(marsFact)
     marsFactDF = pd.DataFrame(marsFacts[1:], columns=marsFacts[0])
-    marsFactDF = marsFactDF.to_html()
+    marsFactDF = marsFactDF.to_html(index=False)
     data['marsFacts'] = marsFactDF
 
     # Scrape Mars Hemispheres
